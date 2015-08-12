@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="Diary">
+<head>
+	<title>Diary</title>
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.custom.css">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+</head>
+<body>
+	<div class="wrapper">
+		<header class="header container">
+			<ul class="nav">
+				<li class="nav__list"><a href="#" onclick ="modal();"class="nav__link js-open-modal" data-modal-id = "popup">Login</a></li>
+				<li class="nav__list"><a href="#" class="nav__link">About</a></li>
+				<li class="nav__list"><a href="#" class="nav__link">Contact</a></li>
+			</ul>
+		</header>
+		<div class="main-content">
+			<div class="container">
+				<span id="typed" style="white-space:pre;"></span>
+			</div>
+		</div>
+    <div id ="popup" class="modal-box">
+      <header>
+        <h2>Welcome to your Diary</h2>
+        <a href="#" class="js-modal-close close"><span class="lnr lnr-cross"></span></a>
+      </header>
+      <div class="modal-body">
+        <div class"smedia-login">
+          <div class="smedia-login__google">
+            Login with Google
+          </div>
+          <div class="smedia-login__facebook" style="margin-left:-5px;">
+            Login with Facebook
+          </div>
+        </div>
+        <div class="striked">
+          OR
+        </div>
+        <form name ="loginForm" ng-submit="loginForm.$valid" novalidate>
+          <ul class="modal-body__ul">
+            <li class="modal-body__li">
+              <input type="email" placeholder = "Email" class="modal-body__input" required />
+            </li>
+            <li>
+              <input type="password" placeholder = "Password" class="modal-body__input" required />
+            </li>
+          </ul>
+          <div class="form-submit">
+            <div class="form-submit__forget">
+              <a href="#" class="loginForm__forget-password">Forget Password?</a>  
+            </div>
+            <div class="form-submit__submit" style="margin-left: -5px;">
+              <button type="submit" value="Submit" class="button-login">Submit</button>  
+            </div>
+          </div>
+          
+          
+        </form>
+      </div>      
+    </div>
+	</div>
+</body>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/app-main.js"></script>
+<script type="text/javascript" src="js/vendor/typed.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

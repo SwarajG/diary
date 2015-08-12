@@ -1,0 +1,380 @@
+/*******
+Font Style
+********/
+
+@font-face {
+	/*font-family: 'montserrat-black';
+	src : url('../fonts/Montserrat-Black.otf');*/
+	font-family: 'montserrat-bold';
+	src : url('../fonts/Montserrat-Bold.otf');
+	/*font-family: 'montserrat-extra-bold';
+	src : url('../fonts/Montserrat-ExtraBold.otf');
+	font-family: 'montserrat-hairline';
+	src : url('../fonts/Montserrat-Hairline.otf');
+	font-family: 'montserrat-regular';
+	src : url('../fonts/Montserrat-Regular.otf');
+	font-family: 'montserrat-semibold';
+	src : url('../fonts/Montserrat-SemiBold.otf');
+	font-family: 'montserrat-ultralight';
+	src : url('../fonts/Montserrat-UltraLight.otf');*/
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'montserrat-light';
+	src : url('../fonts/Montserrat-Light.otf');
+}
+
+html {
+	height: 100%;
+	overflow-x : hidden;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	color : white;
+}
+
+a {
+	text-decoration: none;
+}
+
+* {
+	-webkit-box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	box-sizing : border-box;
+}
+
+/** Main Stylesheet of Page **/
+.wrapper {
+	height: 100%;
+	width: 100%;
+  background: rgb(128,218,235);
+	font-family: 'montserrat-bold';
+}
+
+/* code for animated blinking cursor */
+.typed-cursor{
+  opacity: 1;
+  font-weight: 100;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-ms-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+@-o-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+/** Navabar and header **/
+.header {
+	top: 0;
+	height: 14%;
+	text-align: center;
+}
+
+.nav {
+	float: right;
+	padding: 0;
+	margin: 10px 0;
+}
+
+.nav__list {
+	list-style-type: none;
+	padding: 5px 20px;
+	margin: 0;
+	margin-left: -5px;
+	display: inline-block;
+	border-bottom: 5px solid transparent;
+	-webkit-transition: border 0.25s;
+	-moz-transition : border 0.25s;
+    transition: border 0.25s;
+}
+
+.nav__link {
+	color: white;
+}
+
+.nav__list:hover {
+	border-bottom : 5px solid white;
+}
+
+/** Main Content **/
+
+.container {
+	margin: 0 auto;
+}
+
+#typed  , .main-content {
+	margin: 0;
+	padding: 0;
+	font-size: 82px;
+}
+
+.main-content {
+	margin: 0 auto;
+	vertical-align: middle;
+	margin-top: 10%;
+	text-align: center;
+}
+
+/** Font size **/
+.lnr {
+	font-size: 20px;
+	color: black;
+}
+/** Pop UP **/
+.modal-box {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+	width: 35%;
+	font-family : 'montserrat-light';
+	background: white;
+	border-bottom: 1px solid #aaa;
+	border-radius: 4px;
+	box-shadow: 0 3px 9px rgba(0 , 0 , 0 , 0.5);
+	border :1px solid rgba(0 , 0 , 0 ,0.1);
+	background-clip: padding-box;
+}
+ 
+ .modal-box header,
+ .modal-box .modal-header {
+	padding: 1.25em  1.5em;
+	color: black;	
+	text-align: center;
+}
+
+.modal-box header h2,
+.modal-box .modal-header h2 {
+	margin: 0;
+}
+
+.modal-box {
+	padding: 1.5em 1.5em;
+}
+
+.modal-box footer,
+.modal-box .modal-footer {
+	padding: 1em;
+	border-top: 1px solid #ddd;
+	background :rgba(0 , 0 , 0,0.02);
+	text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 4%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.modal-body__ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.modal-body {
+	width: 100%;
+	padding: 5% 5%;
+	color: black;
+}
+
+.smedia-login {
+	width: 100%;
+}
+
+.smedia-login__google ,
+.smedia-login__facebook {
+	width: 50%;
+	padding: 15px;
+	display: inline-block;
+	font-size: 14px;
+	color: white;
+}
+
+.smedia-login__google {
+	border-radius: 50px 0 0 50px;
+	background-color: #d34836;
+	border-right:3px solid white;
+}
+
+.smedia-login__facebook {
+	border-radius: 0 50px 50px 0;
+	background-color: #3B5998;
+}
+
+.striked {
+	position: relative;
+	color: black;
+	margin-top: 22px;
+	margin-bottom: 12px;
+	font-size: 14px;
+	z-index: 1;
+	overflow: hidden;
+	text-align: center;	
+}
+
+.striked:before ,
+.striked:after {	
+	position: absolute;
+	top: 46%;
+	overflow: hidden;
+	width: 48%;
+	height: 1px;
+	content:'\a0';
+	background-color: black;
+}
+.striked:before {
+	margin-left: -50%;
+	text-align: right;
+}
+
+.striked:after {	
+	margin-left: 2%;
+}
+
+.modal-body__input {
+	width: 100%;
+	padding: 10px 20px;
+	margin: 10px 0;
+	border-radius: 100px;
+	border:1px solid rgb(185 , 185 ,185);	
+	font-size: 18px;
+}
+
+.modal-body__input:focus ,
+.modal-body__input:hover ,
+.modal-body__input:active {
+	border-radius: 100px;
+}
+
+
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+.button-login {	
+	padding: 10px 20px;	
+	background-color: #29b8eb;
+	border-radius: 20px;
+	border: 0;
+	box-shadow: 0;
+	font-size: 18px;
+	color: white;
+	float: right;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.loginForm__forget-password {
+	float: left;
+	color: #ccc;
+	font-size: 14px;
+	padding: 10px;
+	vertical-align: top;	
+}
+
+.form-submit {
+	width: 100%;	
+}
+
+.form-submit__submit , 
+.form-submit__forget {
+	display: inline-block;
+	width: 50%;
+}
+
+/** Media quries **/
+@media only screen and (max-width: 780px) {
+	.nav__list {
+		float: none;
+		border: none;
+	}
+
+	.nav__list:hover {
+		border: none;
+	}
+
+	#typed  , .main-content {
+		margin: 0;
+		padding: 0;
+		margin-top: 30%;
+		font-size: 40px;
+	}
+
+	.modal-box {
+		width: 80%;
+	}
+
+	.modal-body__input {
+		margin: 10px 0;
+		border-radius: 100px;
+		border:1px solid rgb(185 , 185 ,185);	
+		font-size: 14px;
+	}
+
+	.smedia-login__google ,
+	.smedia-login__facebook {
+		width: 50%;
+		padding: 10px;
+		display: inline-block;
+	}
+}
